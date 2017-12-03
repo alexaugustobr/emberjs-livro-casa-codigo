@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+</body>
+</html>
+<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars.min-latest.js"></script>
+<script>
+
+    Handlebars.registerHelper('capitalize', function(string) {
+          return `${string.charAt(0).toUpperCase()}${string.slice(1).toLowerCase()}`;
+        });
+
+    var fonte = "<p>Olha, meu nome é {{capitalize nome}}.</p>";
+    var template = Handlebars.compile(fonte);
+    var dados = { "nome": "clairton"};
+    var resultado = template(dados);
+    console.log(resultado);
+
+
+</script>
