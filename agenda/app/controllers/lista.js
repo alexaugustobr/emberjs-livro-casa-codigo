@@ -18,7 +18,7 @@ let Pessoa = Ember.Object.extend({
 
 
 let pessoa = Pessoa.create({
-      nome: 'João',
+      nome: 'J',
       sobrenome: 'Silva'
     });
 
@@ -45,7 +45,7 @@ console.log(pessoa.get('telefones'));
 console.log(pessoa.get('prefixos'));
 
 export default Controller.extend({
-    nome: pessoa.get('nomeCompleto')
+    pessoa: pessoa
 
 
     

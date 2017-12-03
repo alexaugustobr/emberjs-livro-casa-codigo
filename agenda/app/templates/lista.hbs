@@ -1,3 +1,5 @@
 {{!app/templates/lista.hbs}}
-{{input value=nome}}
+{{#mostra-pessoa pessoa=pessoa}}
+  <div>Esse conteúdo renderizará dentro do componente onde está a marcação {{{yield}}}</div>
+{{/mostra-pessoa}}
 {{outlet}}

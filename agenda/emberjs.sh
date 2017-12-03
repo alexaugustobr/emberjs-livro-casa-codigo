@@ -26,3 +26,11 @@ ember generate route [nome]
 
 ember generate route lista
 
+#criando um componente
+
+ember generate component [nome]
+
+#exemplo
+
+ember generate component mostra-pessoa
+
