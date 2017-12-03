@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 
-
+/* 
 let Pessoa = Ember.Object.extend({
     nome: 'Clairton' ,
     sobrenome: 'Heinzen',
@@ -42,11 +42,9 @@ console.log(pessoa.set('nomeCompleto', 'Daniel <3'));
 
 console.log(pessoa.get('telefones'));
 
-console.log(pessoa.get('prefixos'));
+console.log(pessoa.get('prefixos')); */
 
 export default Controller.extend({
-    pessoa: pessoa
-
-
-    
+    nome: null,
+    queryParams: ['nome'],
 });

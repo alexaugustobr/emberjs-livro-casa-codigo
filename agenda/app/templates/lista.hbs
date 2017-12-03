@@ -1,5 +1,21 @@
 {{!app/templates/lista.hbs}}
-{{#mostra-pessoa pessoa=pessoa}}
-  <div>Esse conteúdo renderizará dentro do componente onde está a marcação {{{yield}}}</div>
-{{/mostra-pessoa}}
-{{outlet}}
+<label for="filtro-nome">Filtrar por nome</label>
+{{input id="filtro-nome" value=nome}}
+<br/>
+
+<table>
+  <thead>
+      <tr>
+        <th>Nome</th>
+      </tr>
+  </thead>
+  <tbody>
+      {{#each model as |pessoa|}}
+        <tr>
+          <td>
+            {{#link-to 'pessoa' pessoa.id}}{{pessoa.nome}}{{/link-to}}
+          </td>
+        </tr>
+      {{/each}}
+  </tbody>
+</table>
