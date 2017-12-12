@@ -1,0 +1,4 @@
+/*ativa mouse virar mao em qq evento ember */
+[data-ember-action]:not(:disabled) {
+cursor: pointer;
+}

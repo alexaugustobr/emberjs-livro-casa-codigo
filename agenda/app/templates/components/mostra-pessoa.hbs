@@ -1,3 +1,10 @@
 {{!app/components/mostra-pessoa.hbs}}
-Nome: {{pessoa.nome}} - {{pessoa.sobrenome}}
 {{yield}}
+Nome: {{pessoa.nome}} - {{pessoa.sobrenome}}
+<br/>
+Aniversário: {{formata-data pessoa.nascidoEm}}
+<br/>
+{{#each pessoa.telefones as |telefone|}}
+({{telefone.prefixo}}) {{telefone.numero}}
+<br/>
+{{/each}}
