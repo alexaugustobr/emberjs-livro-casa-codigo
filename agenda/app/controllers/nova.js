@@ -14,6 +14,9 @@ export default Controller.extend({
             let self = this;
             pessoa.save().then(() => {
                 self.transitionToRoute('lista');
+                this.get('model.telefones').filterBy('id', null).forEach(function(item) { 
+                    item.deleteRecord(); 
+                });
             }).catch((adapterError) => {
                 console.log(adapterError);
             });
