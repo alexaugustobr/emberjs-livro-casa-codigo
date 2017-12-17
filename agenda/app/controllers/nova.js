@@ -13,7 +13,7 @@ export default Controller.extend({
         salvar(pessoa){
             let self = this;
             pessoa.save().then(() => {
-            self.transitionToRoute('lista');
+                self.transitionToRoute('lista');
             }).catch((adapterError) => {
                 console.log(adapterError);
             });
